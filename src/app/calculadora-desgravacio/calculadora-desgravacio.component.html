@@ -1,0 +1,21 @@
+<form [formGroup]="calculadoraDesgravacio" (ngSubmit)="submit()">
+    <p>Import Pla de Pensions Persona:
+        <input type="number" formControlName="importPersona" required>
+    </p>
+
+    <p>Import Pla de Pensions Empresa:
+        <input type="number" formControlName="importEmpresa" required>
+    </p>
+
+    <p>Import Pla de Pensions Autonom:
+        <input type="number" formControlName="importAutonom" required>
+    </p>
+    <br>
+    <p>Base Imponible:
+        <input type="number" formControlName="baseImponible" required>
+    </p>
+    <br>
+    <button type="submit">Confirmar</button>
+</form>
+<div>{{missatge}}</div>
+<div>{{resultado}}</div>
