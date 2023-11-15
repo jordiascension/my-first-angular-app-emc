@@ -1,0 +1,35 @@
+<div class="login-form-flex">
+    <mat-card>
+        <mat-card-title>
+          Calculate Pension Plan
+        </mat-card-title>
+        <br/>
+        <mat-card-content>
+        <form [formGroup]="calculadoraDesgravacio" (ngSubmit)="submit()">
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Import Pla de Pensions Persona       </mat-label>
+                <input matInput formControlName="naturalPersonPensionPlan" required>
+            </mat-form-field>
+            <br/>
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Import Pla de Pensions Empresa     </mat-label>
+                <input matInput formControlName="companyPensionPlan" required>
+            </mat-form-field>
+            <br/>
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Import Pla de Pensions Autonom     </mat-label>
+                <input matInput formControlName="selfEmployedPensionPlan" required>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Base Imponible     </mat-label>
+                <input matInput formControlName="taxBase" required>
+            </mat-form-field>
+            <br>
+            <button mat-raised-button color="primary" type="submit">Calculate</button>
+        </form>
+        <div>{{resultado}}</div>
+        </mat-card-content>
+    </mat-card>
+</div>
+
